@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import Chips from "core/chip";
 import LinkIcon from "images/link.svg";
 import { ImagesType } from "data/blog-data";
+import Title from "core/title";
+import TitleDesc from "core/title-desc";
 
 interface Props {
   mainTitle: string;
@@ -20,28 +22,10 @@ const TitleWrap = styled.div`
   border-bottom: 1px solid #eaecef;
 `;
 
-const Title = styled.div`
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 600;
-  color: #212121;
-  margin-bottom: 16px;
-  padding-left: 8px;
-`;
-
 const HeaderDesc = styled.div`
   padding: 8px;
   display: flex;
   justify-content: space-between;
-  color: #6a737d;
-  font-size: 0.9rem;
-`;
-
-const Left = styled.div`
-  display: flex;
-`;
-const CreatedAt = styled.div`
-  margin-right: 8px;
 `;
 
 const ChipsWrap = styled.div`
@@ -62,7 +46,6 @@ const ImgDesc = styled.div`
   font-size: 0.8rem;
 `;
 
-const Author = styled.div``;
 const Right = styled.div``;
 const Link = styled.img`
   height: 1rem;
@@ -79,13 +62,10 @@ const PostHeader = ({
   return (
     <Container>
       <TitleWrap>
-        <Title>{mainTitle}</Title>
+        <Title title={mainTitle} />
       </TitleWrap>
       <HeaderDesc>
-        <Left>
-          <CreatedAt>{createdAt}</CreatedAt>
-          <Author>{author}</Author>
-        </Left>
+        <TitleDesc createdAt={createdAt} author={author} />
         <Right>
           <Link src={LinkIcon} />
         </Right>

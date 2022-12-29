@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { ImagesType } from "data/blog-data";
+import PostText from "core/post-text";
 
 interface Props {
   title: string;
@@ -37,14 +38,8 @@ const Desc = styled.div`
 
 const TextWrap = styled.div`
   padding: 12px;
-  color: #24292e;
-  display: block;
-  font-size: 0.9rem;
 `;
 
-const Text = styled.div`
-  margin-bottom: 8px;
-`;
 const ImgWrap = styled.div<{ imgLength: number }>`
   display: grid;
   grid-template-columns: repeat(${(prop) => prop.imgLength}, minmax(0, 1fr));
@@ -72,7 +67,12 @@ const PostParagraph = ({ title, desc, text, images }: Props) => {
       {text && (
         <TextWrap>
           {text?.map((t) => {
-            return <Text>{t}</Text>;
+            return (
+              <>
+                <PostText text={t} />
+                <div style={{ marginBottom: "8px" }} />
+              </>
+            );
           })}
         </TextWrap>
       )}
