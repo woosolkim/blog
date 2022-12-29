@@ -43,18 +43,26 @@ const TextWrap = styled.div`
 const ImgWrap = styled.div<{ imgLength: number }>`
   display: grid;
   grid-template-columns: repeat(${(prop) => prop.imgLength}, minmax(0, 1fr));
-  grid-gap: 2px;
+  grid-gap: 8px;
 `;
 
-const ImgInnerWrap = styled.div``;
+const ImgInnerWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 const Img = styled.img`
-  width: 100%;
+  max-height: 600px;
+  width: auto;
+  object-fit: contain;
 `;
 
 const ImgDesc = styled.div`
+  padding: 12px;
   text-align: center;
   color: #6a737d;
   font-size: 0.8rem;
+  height: 1.6rem;
 `;
 
 const PostParagraph = ({ title, desc, text, images }: Props) => {

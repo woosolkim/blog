@@ -37,8 +37,14 @@ const MainImgWrap = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  height: auto;
 `;
-const MainImg = styled.img``;
+const MainImg = styled.img`
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+`;
 
 const ImgDesc = styled.div`
   padding: 8px;
