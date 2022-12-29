@@ -7,7 +7,6 @@ const TitleStyle = styled.div`
   font-weight: 600;
   color: #212121;
   margin-bottom: 16px;
-  padding-left: 8px;
 `;
 
 const Title = ({ title }: { title: string }) => {

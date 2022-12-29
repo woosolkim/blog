@@ -15,11 +15,11 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const TitleWrap = styled.div`
+const SemiTitleWrap = styled.div`
   border-bottom: 1px solid #eaecef;
 `;
 
-const Title = styled.div`
+const SemiTitle = styled.div`
   font-size: 24px;
   line-height: 21px;
   font-weight: 600;
@@ -60,9 +60,9 @@ const ImgDesc = styled.div`
 const PostParagraph = ({ title, desc, text, images }: Props) => {
   return (
     <Container>
-      <TitleWrap>
-        <Title>{title}</Title>
-      </TitleWrap>
+      <SemiTitleWrap>
+        <SemiTitle>{title}</SemiTitle>
+      </SemiTitleWrap>
       {desc && <Desc>| {desc}</Desc>}
       {text && (
         <TextWrap>

@@ -1,6 +1,7 @@
 export interface BlogDataType {
   id: number;
   mainTitle: string;
+  prevText: string;
   mainImage: ImagesType;
   createdAt: string;
   author: string;
@@ -24,8 +25,9 @@ export interface ImagesType {
 
 export const BLOG_DATA: BlogDataType[] = [
   {
-    id: 1,
+    id: 0,
     mainTitle: "블로그 테스트",
+    prevText: "시험삼아 만든 블로그입니다",
     mainImage: {
       seq: 1,
       url: "https://techblog.woowahan.com/wp-content/uploads/2022/12/1.-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%89%E1%85%A1%E1%84%85%E1%85%A1%E1%86%B7%E1%84%8B%E1%85%B5.png",
@@ -65,7 +67,6 @@ export const BLOG_DATA: BlogDataType[] = [
       },
       {
         seq: 2,
-
         title: "오널은 여기까지만 합시다",
         desc: "동해물과 백두산이",
         text: [
@@ -90,8 +91,9 @@ export const BLOG_DATA: BlogDataType[] = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     mainTitle: "블로그 두번째 테스트",
+    prevText: "시험삼아 만든 블로그입니다",
     mainImage: {
       seq: 1,
       url: "https://techblog.woowahan.com/wp-content/uploads/2022/12/1.-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%89%E1%85%A1%E1%84%85%E1%85%A1%E1%86%B7%E1%84%8B%E1%85%B5.png",

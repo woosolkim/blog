@@ -20,6 +20,7 @@ const Container = styled.div`
 
 const TitleWrap = styled.div`
   border-bottom: 1px solid #eaecef;
+  padding-left: 8px;
 `;
 
 const HeaderDesc = styled.div`
