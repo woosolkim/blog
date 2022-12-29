@@ -5,8 +5,9 @@ import { BLOG_DATA } from "data/blog-data";
 import PostHeader from "core/post-header";
 import { useParams } from "react-router-dom";
 const Container = styled.div`
-  width: 1200px;
-  padding: 24px 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px 12px;
 `;
 
 const Other = () => {

@@ -6,8 +6,9 @@ import PostPreview from "core/post-prev";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
-  width: 1200px;
-  padding: 24px 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px 12px;
 `;
 
 const Wrap = styled.div`

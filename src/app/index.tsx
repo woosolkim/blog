@@ -19,8 +19,8 @@ const App = () => {
       <Header />
       <Container>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/post/list" element={<PostList />} />
+          <Route path={"/"} element={<PostList />} />
+          <Route path={"/post/list"} element={<PostList />} />
           <Route path={"/post/:id"} element={<Post />} />
         </Routes>
       </Container>
